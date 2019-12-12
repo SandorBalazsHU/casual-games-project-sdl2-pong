@@ -3,6 +3,6 @@
 int main(int argc, char *argv[])
 {
     Pong pong;
-    pong.gameLoop();
+    pong.start();
     return 0;
 }

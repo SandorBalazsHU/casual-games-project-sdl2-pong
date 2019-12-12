@@ -26,6 +26,7 @@ private:
     bool isRunning;
 
     int init(const char* title, int startPositionX, int startPositionY, int width, int height, bool fullscrean);
+    void exit();
     void eventHandler();
     void update();
     void render();

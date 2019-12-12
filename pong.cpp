@@ -16,6 +16,7 @@ Window::Window(const char* title, int startPositionX, int startPositionY, int wi
 
 int Window::init(const char* title, int startPositionX, int startPositionY, int width, int height, bool fullscrean)
 {
+	atexit( this->exit );
 	int flags = SDL_WINDOW_SHOWN;
 	if(fullscrean){
 		flags = flags | SDL_WINDOW_FULLSCREEN;
@@ -31,6 +32,11 @@ int Window::init(const char* title, int startPositionX, int startPositionY, int 
 	if(renderer) Return -3;
 	
 	return 0;
+}
+
+void exit()
+{
+
 }
 
 Window::~Window()
